@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Choose Your Game</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="top-online">
+      <div class="online-item">
+        <span class="online-dot"></span>
+        <strong id="playingNow">2845</strong>
+        <span data-i18n="playingNow">playing now</span>
+      </div>
+      <span class="divider"></span>
+      <div class="online-item">
+        <span class="online-green" id="wonLastHour">+123</span>
+        <span data-i18n="wonLastHour">won in the last hour</span>
+      </div>
+    </header>
+
+    <section class="ticker-wrap" aria-label="Recent wins">
+      <div class="ticker" id="ticker"></div>
+    </section>
+
+    <section class="bonus-box">
+      <div class="gift">🎁</div>
+      <div class="bonus-text">
+        <small data-i18n="bonusLabel">EXCLUSIVE BONUS</small>
+        <strong>+500% &amp; 500FS</strong>
+      </div>
+      <div class="timer" id="timer">03:00</div>
+    </section>
+
+    <section class="content">
+      <div class="games">
+        <article class="game-card">
+          <div class="game-badge" data-i18n="badgeHot">HOT</div>
+          <div class="game-window">
+            <video autoplay muted loop playsinline><source src="assets/game-1.mp4" type="video/mp4"></video>
+          </div>
+          <h2 class="game-name" data-i18n="game1">TAPPY BIRD</h2>
+          <a class="play-btn" href="https://patang-way-one.com/c24fdb966" target="_blank" rel="noopener" data-i18n="play">▶ Play</a>
+        </article>
+
+        <article class="game-card">
+          <div class="game-badge blue" data-i18n="badgeNew">NEW</div>
+          <div class="game-window">
+            <video autoplay muted loop playsinline><source src="assets/game-2.mp4" type="video/mp4"></video>
+          </div>
+          <h2 class="game-name" data-i18n="game2">TOWER RUSH</h2>
+          <a class="play-btn" href="https://patang-way-one.com/c24fdb966" target="_blank" rel="noopener" data-i18n="play">▶ Play</a>
+        </article>
+
+        <article class="game-card">
+          <div class="game-badge purple" data-i18n="badgeVip">VIP</div>
+          <div class="game-window">
+            <video autoplay muted loop playsinline><source src="assets/game-3.mp4" type="video/mp4"></video>
+          </div>
+          <h2 class="game-name" data-i18n="game3">GURU MINES HACK</h2>
+          <a class="play-btn" href="https://patang-way-one.com/c24fdb966" target="_blank" rel="noopener"><svg class="telegram-icon-color" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="12" fill="#29A9EA"/>
+              <path fill="#ffffff" d="M17.9 7.1 15.8 17c-.2.7-.6.9-1.1.6l-3.1-2.3-1.5 1.5c-.2.2-.3.3-.6.3l.2-3.2 5.8-5.2c.3-.2-.1-.4-.4-.2l-7.2 4.5-3.1-1c-.7-.2-.7-.7.1-1l12.2-4.7c.6-.2 1 .1.8.8z"/>
+            </svg><span data-i18n="join">Join Now</span></a>
+        </article>
+
+        <article class="game-card">
+          <div class="game-badge red" data-i18n="badgeTop">TOP</div>
+          <div class="game-window">
+            <video autoplay muted loop playsinline><source src="assets/game-4.mp4" type="video/mp4"></video>
+          </div>
+          <h2 class="game-name" data-i18n="game4">GURU AVIATOR HACK</h2>
+          <a class="play-btn" href="https://patang-way-one.com/c24fdb966" target="_blank" rel="noopener"><svg class="telegram-icon-color" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="12" fill="#29A9EA"/>
+              <path fill="#ffffff" d="M17.9 7.1 15.8 17c-.2.7-.6.9-1.1.6l-3.1-2.3-1.5 1.5c-.2.2-.3.3-.6.3l.2-3.2 5.8-5.2c.3-.2-.1-.4-.4-.2l-7.2 4.5-3.1-1c-.7-.2-.7-.7.1-1l12.2-4.7c.6-.2 1 .1.8.8z"/>
+            </svg><span data-i18n="join">Join Now</span></a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="fake-win-toast" id="fakeWinToast">
+    <div class="fake-win-flag" id="fakeWinFlag">🇺🇸</div>
+    <div class="fake-win-copy">
+      <small id="fakeWinId">ID: 482***</small>
+      <strong id="fakeWinAmount">BIG WIN +$347</strong>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var dict = {
+        en: {
+          title: "Choose Your Game",
+          playingNow: "playing now",
+          wonLastHour: "won in the last hour",
+          bonusLabel: "EXCLUSIVE BONUS",
+          badgeHot: "HOT", badgeNew: "NEW", badgeVip: "VIP", badgeTop: "TOP",
+          game1: "TAPPY BIRD", game2: "TOWER RUSH",
+          game3: "GURU MINES HACK", game4: "GURU AVIATOR HACK",
+          play: "▶ Play", join: "Join Now"
+        },
+        hi: {
+          title: "अपना गेम चुनें",
+          playingNow: "अभी खेल रहे हैं",
+          wonLastHour: "पिछले 1 घंटे में जीते",
+          bonusLabel: "विशेष बोनस",
+          badgeHot: "हॉट", badgeNew: "नया", badgeVip: "वीआईपी", badgeTop: "टॉप",
+          game1: "टैपी बर्ड", game2: "टावर रश",
+          game3: "गुरु माइन्स हैक", game4: "गुरु एविएटर हैक",
+          play: "▶ खेलें", join: "अभी शामिल हों"
+        }
+      };
+      function detect() {
+        var langs = [navigator.language].concat(navigator.languages || []);
+        for (var i = 0; i < langs.length; i++) {
+          if (langs[i] && langs[i].toLowerCase().indexOf("hi") === 0) return "hi";
+        }
+        return "en";
+      }
+      var lang = detect();
+      var t = dict[lang];
+      document.documentElement.lang = lang;
+      document.title = t.title;
+      document.querySelectorAll("[data-i18n]").forEach(function (el) {
+        var key = el.getAttribute("data-i18n");
+        if (t[key]) el.textContent = t[key];
+      });
+    })();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
